@@ -31,3 +31,19 @@ $(function () {
         $('body').toggleClass('menu-open');
     });
 });
+
+//accordion
+$(function (){
+    $('.answer__content').hide();
+
+    $('.questions__content').click(function (){
+        $(this).parent().toggleClass('active-el');
+        $('.info__block').not($(this).parent()).removeClass('active-el');
+        $('.answer__content').each(function (){
+            $(this).slideUp();
+        });
+        if(!$(this).next().is(":visible")) {
+            $(this).next().slideDown();
+        }
+    });
+});
