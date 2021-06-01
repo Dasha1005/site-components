@@ -8,6 +8,7 @@ $(function () {
         $(dataId).addClass('active-tab');
     });
 });
+
 //progress-bar
 $(function(){
     var owl  = $('.object-types .owl-carousel');
@@ -21,5 +22,12 @@ $(function(){
     });
     owl.on('resized.owl.carousel', function(event){
         owl.trigger('to.owl.carousel', [0, 400]);
+    });
+});
+
+//mobile-menu
+$(function () {
+    $('.mobile-menu').click(function () {
+        $('body').toggleClass('menu-open');
     });
 });
