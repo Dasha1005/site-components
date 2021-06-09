@@ -40,37 +40,6 @@ a:hover {
 }
 
 /*mobile-menu*/
-.mobile-text {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: 'Gilroy-Extrabold';
-    font-size: 24px;
-    letter-spacing: 0.04em;
-    line-height: 1.2;
-}
-
-.mobile-wrapper,
-.mobile-inner {
-    display: flex;
-    align-items: center;
-}
-
-.mobile-wrapper {
-    display: none;
-}
-
-.mobile-inner {
-    min-height: 61px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #E3E8F3;
-    position: fixed;
-    top: 0px;
-    left: 20px;
-    right: 20px;
-    background-color: #fff;
-    z-index: 11111;
-}
 
 .mobile-menu,
 .menu,
@@ -128,115 +97,10 @@ a:hover {
     background-color: transparent;
 }
 
-.mobile .left-block .active .info-content,
-.mobile .left-block .active .info-content:hover,
-.mobile .left-block .info-content:hover,
-.mobile .left-block .info-content {
-    border: none;
-    border-radius: 0;
-    max-width: 100%;
-    height: auto;
-    padding: 14px 0 16px 0;
-    background-color: transparent;
-    color: #050E1A;
-}
-
-.mobile .left-block .info-block {
-    margin-bottom: 0;
-    border-bottom: 1px solid #ECECEC;
-}
-
-.mobile .left-block .info__text {
-    padding: 0;
-    border: none;
-    border-radius: 0;
-    max-width: 100%;
-    margin-top: 0;
-}
-
-.mobile .left-block .info__text a {
-    border: none;
-}
-
-.mobile .left-block .info-content {
-    font-size: 16px;
-}
-
-.mobile__contact-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    margin-top: 70px;
-    padding-top: 20px;
-    border-top: 1px solid #E3E8F3;
-}
-
-.mobile .btn__call-back {
-    margin-right: 30px;
-}
-
-.mobile .btn__call-back,
-.mobile .mobile__phone {
-    max-width: calc(45% - 15px);
-    width: 100%;
-    border-radius: 12px;
-    height: 40px;
-    font-size: 14px;
-    line-height: 1.1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #2623DD;
-    box-shadow: none;
-    font-family: 'Gilroy-Extrabold';
-    color: #2623DD;
-    background-color: transparent;
-    transition: 0.3s linear;
-}
-
-.mobile .mobile__phone:hover,
-.mobile .btn__call-back:hover {
-    background-color: #2623DD;
-    color: #FFFFFF;
-    transition: 0.3s linear;
-}
-
-
-
-.mobile li a {
-    font-size: 18px;
-    margin-left: 0;
-    padding-bottom: 17px;
-    display: block;
-    font-family: 'Gilroy-Bold';
-    line-height: 1.2;
-    color: #050E1A;
-    padding-top: 13px;
-    border-bottom: 1px solid #E3E8F3;
-}
-
-.mobile li:first-child a {
-    padding-top: 33px;
-}
-
 .mobile li a {
     position: relative;
     display: flex;
     align-items: center;
-}
-
-.mobile li a::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    background-image: url('../images/mobile-menu__decor.svg');
-    background-repeat: no-repeat;
-    width: 18px;
-    height: 14px;
-}
-
-.mobile li a:hover::after {
-    background-color: transparent;
 }
 
 .menu-open .mobile-menu {
@@ -284,67 +148,5 @@ a:hover {
 
 
 .menu-open {
-    height: auto;
-    max-height: 900px;
-}
-
-header .mobile-menu__close,
-header .mobile-menu__close:hover {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #EEEEF6;
-    box-sizing: border-box;
-    border-radius: 12px;
-}
-
-.mobile-menu__close::before,
-.mobile-menu__close::after {
-    content: '';
-    position: absolute;
-    background-color: #050E1A;
-    height: 2px;
-    width: 20px;
-}
-
-.mobile-menu__close::before {
-    transform: rotate(-45deg);
-}
-
-.mobile-menu__close::after {
-    transform: rotate(45deg);
-}
-
-.mobile__btn-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 80px;
-}
-
-.burger-menu {
-    height: 2px;
-    width: 20px;
-    margin-top: 4px;
-    display: block;
-    background-color: #050E1A;
-    border-radius: 2px;
-}
-
-.mobile-menu {
-    border: none;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #EEEEF6;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    display: none;
+    height: 100vh;
 }
