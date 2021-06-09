@@ -24,7 +24,7 @@ ul li {
     color: #000;
 }
 .btn:hover{
-
+    transition: 0.3s linear;
 }
 a,
 a:hover {
