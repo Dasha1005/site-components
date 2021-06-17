@@ -68,3 +68,59 @@ $(function (){
                owl.trigger('to.owl.carousel', [0, 400]);
             });
     });
+
+//quiz-form
+$(document).ready(function () {
+    $('input.btn-next[type="button"]').prop('disabled', true);
+    //disabled-btn
+    if ($('.form-step__inner.active').index() == 0) {
+      $('.form-step__inner.active input.btn-prev[type="button"]').prop('disabled', true);
+    } else {
+      $('.form-step__inner.active input.btn-prev[type="button"]').removeAttr('disabled');
+    }
+    //prev-btn
+    $('.btn-prev').click(function () {
+      $(this).parents('.form-step__inner').removeClass('active');
+      $(this).parents('.form-step__inner').prev().addClass('active');
+    });
+  
+    $('input').on('change keyup', function () {
+      $('.form-step__inner').each(function () {
+        var name = $('#name').val(),
+          email = $('#email').val(),
+          phone = $('#phone').val(),
+          password = $('#password').val(),
+          rePassword = $('#re-password').val(),
+          checkboxAgree = $('#checkbox-agree').is(':checked'),
+          radio = $('input[name="gender"]').is(':checked');
+        //validate form  
+        if (checkboxAgree == true && name !== '' && email !== '' && phone !== '' &&
+          $('.form-step__inner.active').index() == 0) {
+          $('.form-step__inner.active input.btn-next[type="button"]').removeAttr('disabled');
+          $('.form-step__inner.active .form-step__text').removeClass('error');
+          $('.btn-next').click(function () {
+            $('.form-step__inner.active').removeClass('active');
+            $('.form-step__inner:eq(1)').addClass('active');
+          });
+        } else if (radio == true && $('.form-step__inner.active').index() == 1) {
+          $('.form-step__inner.active input.btn-next[type="button"]').removeAttr('disabled');
+          $('.form-step__inner.active .form-step__text').removeClass('error');
+          $('.btn-next').click(function () {
+            $('.form-step__inner.active').removeClass('active');
+            $('.form-step__inner:eq(2)').addClass('active');
+          });
+        } else if (password !== '' && password.length >= 8 && password == rePassword &&
+          $('.form-step__inner.active').index() == 2) {
+          $('.form-step__inner.active input.btn-next[type="button"]').removeAttr('disabled');
+          $('.form-step__inner.active .form-step__text').removeClass('error');
+          $('.btn-next').click(function () {
+            $('.form-step__inner.active').removeClass('active');
+            $('.form-step__inner:eq(3)').addClass('active');
+          });
+        } else {
+          $('.form-step__inner.active .form-step__text').addClass('error');
+          $('.form-step__inner.active input.btn-next[type="button"]').prop('disabled', true);
+        }
+      });
+    });
+  });
