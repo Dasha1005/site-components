@@ -1,11 +1,14 @@
 /*Bootstrap Grid v4 */
 .container,
 .container-fluid{
-  width: 100%;
   padding-right:  15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.container-fluid{
+  width: 100%;
 }
 
 @media (min-width: 576px) {
