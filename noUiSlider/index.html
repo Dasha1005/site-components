@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Slider</title>
+    <link rel="stylesheet" href="css/nouislider.css">
+</head>
+<body>
+    <style>
+        #range-slider{
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        #range-slider.noUi-state-tap .noUi-connect,
+        #range-slider.noUi-state-tap .noUi-origin {
+            -webkit-transition: transform 1500ms;
+            transition: transform 1500ms;
+}
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.highlight{
+    color: aqua;
+}
+.noUi-value-horizontal {
+    transform: translate(-50%, 100%);
+}
+    </style>
+    <div class="container">
+<!-- 
+    <div id="range-slider"></div>
+    <div id="slider-keyboard-value"></div> -->
+
+    <div id="range"></div>
+
+</div> 
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/qunit/qunit-1.12.0.js"></script>
+
+    <script src="js/nouislider.js"></script>
+
+    <script src="js/wNumb.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
