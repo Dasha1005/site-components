@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>DatePicker</title>
+</head>
+<body id="body">
+    <div class="container">
+        <p>Мы работаем с 8:00 до 18:00</p>
+        <p>Запись каждые пол часа</p>
+        <button id="open-modal">Запишитесь</button>
+
+
+        <div id="modal">
+            <form action="" id="form">
+            <span id="close-modal">X</span>
+            <p>Выберите дату и время</p>
+            <label for="date-input">Дата</label>
+            <input type="text" id="date-input">
+            <label for="time">Время</label>
+            <input type="time" id="time" min="08:00" max="17:30" step="1800" value="" required>
+            <button id="modal-btn">Записаться</button>
+        </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/datedropper-jquery.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
